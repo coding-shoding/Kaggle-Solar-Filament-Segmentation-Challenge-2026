@@ -1,1 +1,1 @@
-# Deep-Learning-on-Animation
+# Kaggle-Solar-Filament-Segmentation-Challenge-2026
