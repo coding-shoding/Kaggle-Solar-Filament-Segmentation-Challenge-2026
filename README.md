@@ -1,4 +1,4 @@
-# Solar Filament Instance Segmentation (v5 Pipeline)
+# Solar Filament Instance Segmentation (v6 Pipeline)
 
 An end-to-end deep learning pipeline for high-resolution instance segmentation of solar filaments from full-disk H$\alpha$ solar images using UNet, an ImageNet-pretrained ResNet34 encoder, recall-biased BCE-Tversky loss, overlapping sliding-window inference, and connected-component post-processing.
 
@@ -6,7 +6,7 @@ Developed for the **MAGFiLO 1.0 (Kaggle 2026)** competition.
 
 ---
 
-## 🌟 Key Features in v5
+## 🌟 Key Features in v6
 
 1. **High-Resolution Overlapping Tiling ($2048 \times 2048 \rightarrow 512 \times 512$, Stride 384):**
    - Whole-disk downsampling crushes thin solar filaments and fine barb structures.
@@ -77,7 +77,7 @@ Key library versions used:
 ## 📁 Repository Structure
 
 ```text
-├── solar_filament_segmentationv5.ipynb   # Main end-to-end v5 pipeline notebook
+├── solar_filament_segmentationv6.ipynb   # Main end-to-end v6 pipeline notebook
 ├── README.md                             # Project documentation and reproduction guide
 └── .gitignore                            # Excludes dataset, weights, and environment files
 ```
@@ -104,18 +104,18 @@ Key library versions used:
    ```
 
 3. **Configure Dataset Path:**
-   Open `solar_filament_segmentationv5.ipynb` and ensure `Config.BASE_DIR` points to your local MAGFiLO 1.0 dataset directory:
+   Open `solar_filament_segmentationv6.ipynb` and ensure `Config.BASE_DIR` points to your local MAGFiLO 1.0 dataset directory:
    ```python
    BASE_DIR = Path("path/to/MAGFiLO_1.0_Kaggle_2026")
    ```
 
 4. **Execute the Notebook:**
-   Run all cells sequentially in `solar_filament_segmentationv5.ipynb`:
+   Run all cells sequentially in `solar_filament_segmentationv6.ipynb`:
    - **Cells 1–4:** Environment validation, configuration, and tiled dataset creation.
    - **Cell 5:** Exploratory data analysis (tile visualizer).
    - **Cells 6–7:** UNet model definition and training loop with early stopping.
    - **Cells 8–10:** Overlapping full-disk prediction, Panoptic Quality (PQ) validation evaluation, and test set inference.
-   - **Output:** Generates `best_filament_unet_v5.pt` (best checkpoint) and `submission_v5.csv` (180 test images formatted in COCO RLE counts).
+   - **Output:** Generates `best_filament_unet_v6.pt` (best checkpoint) and `submission_v6.csv` (180 test images formatted in COCO RLE counts).
 
 ---
 
